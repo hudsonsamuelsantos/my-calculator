@@ -1,10 +1,28 @@
-# My.Calculator $
+# my.Calculator 
 
-## Run:
+## Sobre o projeto
 
-In the project directory, you can run:
+<p align="center">
+  <img alt="my.Calculator Layout" src=".github/my-calculator.png" width="100%">
+</p>
 
-### `npm start`
+A aplicação consiste em uma calculadora construída com base no design da calculadora do macOS.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tecnologias utilizadas
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- React
+- HTML
+- CSS
+- JavaScript
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## Autor
+
+Hudson Santos
+
+https://www.linkedin.com/in/hudsonsamuelsantos/
