@@ -1,5 +1,5 @@
-import React from "react";
 import "./Button.css"
+import React from "react";
 
 export default props =>
     <button className={
@@ -9,6 +9,6 @@ export default props =>
         ${props.operation ? "operation" : ""}
     `}
         onClick={event => props.click && props.click(event.target.innerHTML)}
-    >    
+    >
         {props.label}
     </button>

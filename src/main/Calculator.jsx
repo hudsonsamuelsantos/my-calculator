@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
 import './Calculator.css'
+import React, { Component } from 'react';
+
 import Button from '../components/Button';
 import Display from '../components/Display';
 
@@ -7,7 +8,7 @@ const initialState = {
     displayValue: "0",
     clearDisplay: false,
     operation: null,
-    values:[0, 0],
+    values: [0, 0],
     current: 0
 }
 
@@ -16,12 +17,12 @@ export default class Calculator extends Component {
     state = initialState
 
     clearMemory() {
-        this.setState({...initialState})
+        this.setState({ ...initialState })
     }
 
     setOperation(operation) {
-        if(this.state.current === 0) {
-            this.setState({operation, current:1, clearDisplay: true})
+        if (this.state.current === 0) {
+            this.setState({ operation, current: 1, clearDisplay: true })
         } else {
             const result = operation === "="
             const currentOperation = this.state.operation
@@ -40,7 +41,7 @@ export default class Calculator extends Component {
     }
 
     addDigit(digit) {
-        if(digit === "." && this.state.displayValue.includes(".")) {
+        if (digit === "." && this.state.displayValue.includes(".")) {
             return
         }
 
@@ -48,14 +49,14 @@ export default class Calculator extends Component {
             || this.state.clearDisplay
         const currentValue = clearDisplay ? "" : this.state.displayValue
         const displayValue = currentValue + digit
-        this.setState({displayValue, clearDisplay:false})
+        this.setState({ displayValue, clearDisplay: false })
 
         if (digit !== ".") {
             const index = this.state.current
             const newValue = parseFloat(displayValue)
             const values = [...this.state.values]
             values[index] = newValue
-            this.setState({values})
+            this.setState({ values })
         }
     }
 
@@ -65,24 +66,24 @@ export default class Calculator extends Component {
 
         return (
             <div className='calculator'>
-                <Display value={this.state.displayValue}/>
-                <Button label="AC" click={()=> this.clearMemory()} triple/>
-                <Button label="/" click={setOperation} operation/>
-                <Button label="7" click={addDigit}/>
-                <Button label="8" click={addDigit}/>
-                <Button label="9" click={addDigit}/>
-                <Button label="*" click={setOperation} operation/>
-                <Button label="4" click={addDigit}/>
-                <Button label="5" click={addDigit}/>
-                <Button label="6" click={addDigit}/>
-                <Button label="-" click={setOperation} operation/>
-                <Button label="1" click={addDigit}/>
-                <Button label="2" click={addDigit}/>
-                <Button label="3" click={addDigit}/>
-                <Button label="+" click={setOperation} operation/>
-                <Button label="0" click={addDigit} double/>
-                <Button label="." click={addDigit}/>
-                <Button label="=" click={setOperation} operation/>
+                <Display value={this.state.displayValue} />
+                <Button label="AC" click={() => this.clearMemory()} triple />
+                <Button label="/" click={setOperation} operation />
+                <Button label="7" click={addDigit} />
+                <Button label="8" click={addDigit} />
+                <Button label="9" click={addDigit} />
+                <Button label="*" click={setOperation} operation />
+                <Button label="4" click={addDigit} />
+                <Button label="5" click={addDigit} />
+                <Button label="6" click={addDigit} />
+                <Button label="-" click={setOperation} operation />
+                <Button label="1" click={addDigit} />
+                <Button label="2" click={addDigit} />
+                <Button label="3" click={addDigit} />
+                <Button label="+" click={setOperation} operation />
+                <Button label="0" click={addDigit} double />
+                <Button label="." click={addDigit} />
+                <Button label="=" click={setOperation} operation />
             </div>
         )
     }
