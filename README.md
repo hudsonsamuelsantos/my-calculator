@@ -1,21 +1,27 @@
-# my.Calculator 
+<h1 align="center">
+  my.Calculator
+</h1>
 
-## Sobre o projeto
+<h2 align="center">
+  Sobre o projeto
+</h2>
 
 <p align="center">
   <img alt="my.Calculator Layout" src=".github/my-calculator.png" width="100%">
 </p>
 
-A aplicação consiste em uma calculadora construída com base no design da calculadora do macOS.
+Uma calculadora construída com base no design da calculadora do macOS.
+
+Acesse o projeto: https://hudsonsamuelsantos.github.io/my-calculator-react/
 
 ## 🚀 Tecnologias utilizadas
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - React
-- HTML
-- CSS
 - JavaScript
+- CSS
+- HTML
 
 ## :memo: Licença
 
